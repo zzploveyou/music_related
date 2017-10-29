@@ -3,15 +3,17 @@ import os
 import sys
 from shutil import copy
 def main():
-    print("Usage: python cpmp3.py sourceDir targetDir")
     if len(sys.argv) != 3:
+        print("Usage: python cpmp3.py sourceDir targetDir")
         sys.exit(0)
     else:
         sourceDir = sys.argv[1]
         targetDir = sys.argv[2]
         if not os.path.isdir(sourceDir):
+            print("Usage: python cpmp3.py sourceDir targetDir")
             sys.exit(1)
         if not os.path.isdir(targetDir):
+            print("Usage: python cpmp3.py sourceDir targetDir")
             sys.exit(1)
     cp = 0
     print("copying mp3 file from '{}' to '{}' ... ".format(sourceDir, targetDir))

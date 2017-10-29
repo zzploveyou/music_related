@@ -3,12 +3,13 @@ import os
 import sys
 from glob import glob
 def main():
-    print("Usage: python order.py PATH")
     if len(sys.argv) != 2:
+        print("Usage: python order.py PATH")
         sys.exit(1)
     else:
         PATH = sys.argv[1]
         if not os.path.isdir(PATH):
+            print("Usage: python order.py PATH")
             sys.exit(1)
     idx = 1
     for f in glob(os.path.join(PATH, "*.mp3")):
